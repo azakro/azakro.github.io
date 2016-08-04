@@ -1,0 +1,63 @@
+body{
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+	color: #222;
+}
+
+h3{
+	color: #474343;
+}
+
+p{
+	color: #6D6867;
+}
+
+a:link{ /*unvisited link*/
+	color: black;
+	text-decoration: none;
+}
+
+a:visited{ /*visited link*/
+	color: black;
+}
+
+a:hover{ /*mouse over link*/
+	color: green;
+}
+
+canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 1000px;
+}
+
+
+.menuBar li{
+	display: inline;
+	padding: 15px;
+}
+
+.resumePart{
+	margin: 40px 120px 40px 120px;
+}
+
+.images{
+    padding: 20px;
+}
+
+.github{
+    padding: 20px;
+}
+
+.redBubble{
+    padding: 20px;
+}
+
+#img1:hover {opacity: 0.7;}
+#img2:hover {opacity: 0.7;}
+#img3:hover {opacity: 0.7;}
+#img4:hover {opacity: 0.7;}
+#img5:hover {opacity: 0.7;}
+#img6:hover {opacity: 0.7;}
