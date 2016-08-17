@@ -30,10 +30,10 @@ function draw(){
 	text("vsco", innerWidth-100, 2*(innerHeight/5));
 
 	fill(255);
-	if(mouseX>innerWidth-100 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+	if(mouseX>innerWidth-150 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("redbubb", innerWidth-100, 3*(innerHeight/5));
+	text("redbubble", innerWidth-150, 3*(innerHeight/5));
 
 	noFill();
 
@@ -64,7 +64,7 @@ function mouseClicked(){
 		link("https://github.com/azakro");
 	}else if(mouseX>innerWidth-100 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
 		link("https://vsco.co/azakro");
-	}else if(mouseX>innerWidth-100 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+	}else if(mouseX>innerWidth-150 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
 		link("http://www.redbubble.com/people/azakro");
 	}
 }
