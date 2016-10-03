@@ -33,7 +33,13 @@ function draw(){
 	if(mouseX>innerWidth-100 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("insta", innerWidth-100, 3*(innerHeight/5));
+	text("autumn", innerWidth-120, 3*(innerHeight/5));
+
+	fill(255);
+	if(mouseX>innerWidth-100 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
+		fill(randomColor1, randomColor2, randomColor3);
+	}
+	text("bubblegum", innerWidth-160, 4*(innerHeight/5));
 
 	noFill();
 
@@ -64,8 +70,10 @@ function mouseClicked(){
 		link("https://github.com/azakro");
 	}else if(mouseX>innerWidth-100 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
 		link("https://vsco.co/azakro");
-	}else if(mouseX>innerWidth-100 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
-		link("https://www.instagram.com/azakro/");
+	}else if(mouseX>innerWidth-120 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+		link("curveSketch.html");
+	}else if(mouseX>innerWidth-160 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
+		link("circLineSketch.html");
 	}
 }
 
