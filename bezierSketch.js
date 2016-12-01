@@ -27,7 +27,7 @@ function draw(){
 	if(mouseX>innerWidth-100 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("vsco", innerWidth-100, 2*(innerHeight/5));
+	text("photos", innerWidth-100, 2*(innerHeight/5));
 
 	fill(255);
 	if(mouseX>innerWidth-120 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
