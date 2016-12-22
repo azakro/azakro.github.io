@@ -1,0 +1,31 @@
+div, input, h1, h2, h3, h4, h5, h6, p {border-style: solid;border-width: 0px;border-color: #000;}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-threesixty {
+	display: inline-block;
+	margin-bottom: 0;
+	border: 1px solid #000;
+}
+.btn-threesixty-play {
+	width: 30px;
+	height: 30px;
+	background: url(images/btn-sprite.png) -40px 0;
+	}
+.btn-threesixty-pause {
+	width: 30px;
+	height: 30px;
+	background: url(images/btn-sprite.png) -70px 0;
+	}
+.btn-threesixty-next {
+	width: 40px;
+	height: 30px;
+	background: url(images/btn-sprite.png) -100px 0;
+	}
+.btn-threesixty-previous {
+	width: 40px;
+	height: 30px;
+	background: url(images/btn-sprite.png) 0px 0;
+	}

@@ -3,12 +3,12 @@ body{
 	color: #222;
 }
 
-h2{
-	text-align: center;
-}
-
 p{
 	color: #6D6867;
+}
+
+h2{
+	color: #1B6136;
 }
 
 a:link{ /*unvisited link*/
@@ -33,8 +33,14 @@ canvas {
     width: 1000px;
 }
 
-form{
-	text-align: center;
+img{
+	padding: 30px;
+}
+
+iframe{
+	display: block;
+    margin: auto;
+    padding: 20px;
 }
 
 .menuBar li{
@@ -46,17 +52,10 @@ form{
 	padding: 20px 200px 20px 200px;
 }
 
-.images{
-    padding: 20px;
+.info{
+	padding: 50px 100px 50px 100px;
 }
 
-.github{
-    padding: 20px;
-}
-
-.redBubble{
-    padding: 20px;
-}
 
 #img1:hover {opacity: 0.7;}
 #img2:hover {opacity: 0.7;}
