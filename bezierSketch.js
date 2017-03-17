@@ -1,7 +1,6 @@
 var mouse = 0;
 var pointX;
 var pointY;
-var randomColor;
 
 function setup(){
 	createCanvas(window.innerWidth, window.innerHeight);
@@ -12,9 +11,9 @@ function setup(){
 
 function draw(){
 	mouse = false;
-	randomColor1 = random(255);
-	randomColor2 = random(255);
-	randomColor3 = random(255);
+	var randomColor1 = random(255);
+	var randomColor2 = random(255);
+	var randomColor3 = random(255);
 	textSize(40);
 
 	fill(255);
@@ -30,16 +29,16 @@ function draw(){
 	text("photos", innerWidth-150, 2*(innerHeight/5));
 
 	fill(255);
-	if(mouseX>innerWidth-160 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+	if(mouseX>innerWidth-140 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("autumn", innerWidth-160, 3*(innerHeight/5));
+	text("videos", innerWidth-140, 3*(innerHeight/5));
 
 	fill(255);
-	if(mouseX>innerWidth-210 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
+	if(mouseX>innerWidth-160 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("bubblegum", innerWidth-210, 4*(innerHeight/5));
+	text("surprise", innerWidth-160, 4*(innerHeight/5));
 
 	noFill();
 
@@ -70,10 +69,17 @@ function mouseClicked(){
 		link("https://github.com/azakro");
 	}else if(mouseX>innerWidth-150 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
 		link("https://vsco.co/azakro");
-	}else if(mouseX>innerWidth-160 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
-		link("curveSketch.html");
-	}else if(mouseX>innerWidth-210 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
-		link("circLineSketch.html");
+	}else if(mouseX>innerWidth-140 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+		link("https://www.youtube.com/channel/UCPtke_I3oA_K-1I8lJQgLdA");
+	}else if(mouseX>innerWidth-160 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
+		var randomSketch = random(3);
+		if(randomSketch == 0 || randomSketch > 0 && randomSketch < 1){
+			link("circLineSketch.html");
+		} else if(randomSketch == 1 || randomSketch > 1 && randomSketch < 2){
+			link("curveSketch.html");
+		} else if(randomSketch == 2 || randomSketch > 2 && randomSketch < 3){
+			link("orbitSketch.html");
+		}
 	}
 }
 
