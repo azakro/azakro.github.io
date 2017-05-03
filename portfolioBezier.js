@@ -1,7 +1,3 @@
-var mouse = 0;
-var pointX;
-var pointY;
-var randomColor;
 
 function setup(){
 	createCanvas(window.innerWidth, window.innerHeight);
@@ -12,59 +8,45 @@ function setup(){
 
 function draw(){
 	mouse = false;
-	randomColor1 = random(255);
-	randomColor2 = random(255);
-	randomColor3 = random(255);
+	var randomColor1 = random(255);
+	var randomColor2 = random(255);
+	var randomColor3 = random(255);
 	textSize(40);
 
-	fill(255);
-	if(mouseX>innerWidth-120 && mouseY>innerHeight/5-30 && mouseY<innerHeight/5){
+	push();
+  	star(mouseX, mouseY, 5, 35, 10); 
+  	pop();
+
+  	fill(255);
+	if(mouseX>innerWidth/4-50 && mouseX<innerWidth/4+120 && mouseY>innerHeight/3-30 && mouseY<innerHeight/3){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("photo", innerWidth-120, innerHeight/5);
+	text("sculpture", innerWidth/4-50, innerHeight/3);
 
 	fill(255);
-	if(mouseX>innerWidth-90 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
+	if(mouseX>innerWidth/4-75 && mouseX<innerWidth/4+180 && mouseY>2*(innerHeight/3)-30 && mouseY<2*(innerHeight/3)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("AR", innerWidth-90, 2*(innerHeight/5));
+	text("graphic design", innerWidth/4-75, 2*(innerHeight/3));
 
 	fill(255);
-	if(mouseX>innerWidth-140 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+	if(mouseX>2*(innerWidth/4)-55 && mouseX<2*(innerWidth/4)+75 && mouseY>innerHeight/2-30 && mouseY<innerHeight/2){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("design", innerWidth-140, 3*(innerHeight/5));
+	text("drawing", 2*(innerWidth/4)-55, innerHeight/2);
 
 	fill(255);
-	if(mouseX>innerWidth-100 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
+	if(mouseX>3*(innerWidth/4)-110 && mouseX<3*(innerWidth/4)+110 && mouseY>innerHeight/3-30 && mouseY<innerHeight/3){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("3D", innerWidth-100, 4*(innerHeight/5));
+	text("printmaking", 3*(innerWidth/4)-110, innerHeight/3);
 
 	fill(255);
-	if(mouseX>innerWidth-120 && mouseY>5*(innerHeight/5)-30 && mouseY<5*(innerHeight/5)){
+	if(mouseX>3*(innerWidth/4)-70 && mouseX<3*(innerWidth/4)+70 && mouseY>2*(innerHeight/3)-30 && mouseY<2*(innerHeight/3)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("video", innerWidth-120, 5*(innerHeight/5));
-
-	noFill();
-
-	if(mouse%5 == 0){
-		makeCurve(15.0, 20);
-		stroke(255, 0, 0);
-	}else if(mouse%5 == 1){
-		makeCurve(1000.0, 110);
-		stroke(0, 255, 0);
-	}else if(mouse%5 == 2){
-		makeCurve(45.0, 100);
-		stroke(0, 0, 255);
-	}else if(mouse%5 == 3){
-		makeCurve(1.0, 1000);
-		stroke(255, 255, 255);
-	}else if(mouse%5 == 4){
-		makeCurve(3.0, 65);
-		stroke(0, 0, 0);
-	}
+	text("painting", 3*(innerWidth/4)-70, 2*(innerHeight/3));
+	
 }
 
 function link(url, winName, options) {
@@ -72,21 +54,30 @@ function link(url, winName, options) {
 }
 
 function mouseClicked(){
-	if(mouseX>innerWidth-120 && mouseY>innerHeight/5-30 && mouseY<innerHeight/5){
-		link("photo.html");
-	}else if(mouseX>innerWidth-90 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
-		link("ar.html");
-	}else if(mouseX>innerWidth-140 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
-		link("design.html");
-	}else if(mouseX>innerWidth-100 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
-		link("3D.html");
-	}else if(mouseX>innerWidth-120 && mouseY>5*(innerHeight/5)-30 && mouseY<5*(innerHeight/5)){
-		link("video.html");
+	if(mouseX>innerWidth/4-50 && mouseX<innerWidth/4+120 && mouseY>innerHeight/3-30 && mouseY<innerHeight/3){
+		link("sculpture.html");
+	}else if(mouseX>innerWidth/4-75 && mouseX<innerWidth/4+180 && mouseY>2*(innerHeight/3)-30 && mouseY<2*(innerHeight/3)){
+		link("graphicDesign.html");
+	}else if(mouseX>2*(innerWidth/4)-55 && mouseX<2*(innerWidth/4)+75 && mouseY>innerHeight/2-30 && mouseY<innerHeight/2){
+		link("drawing.html");
+	}else if(mouseX>3*(innerWidth/4)-110 && mouseX<3*(innerWidth/4)+110 && mouseY>innerHeight/3-30 && mouseY<innerHeight/3){
+		link("printmaking.html");
+	}else if(mouseX>3*(innerWidth/4)-70 && mouseX<3*(innerWidth/4)+70 && mouseY>2*(innerHeight/3)-30 && mouseY<2*(innerHeight/3)){
+		link("painting.html");
 	}
 }
 
-function makeCurve(num1, num2){
-	for (var i = 0; i < 20; i += 20) {
-    	bezier(mouseX-(i/num1), mouseY, 410, 20, num2, 200,(i/num1), (i/num1));
-  	}
+function star(x, y, radius1, radius2, npoints) {
+  var angle = TWO_PI / npoints;
+  var halfAngle = angle/2.0;
+  beginShape();
+  for (var a = 0; a < TWO_PI; a += angle) {
+    var sx = x + cos(a) * radius2;
+    var sy = y + sin(a) * radius2;
+    vertex(sx, sy);
+    sx = x + cos(a+halfAngle) * radius1;
+    sy = y + sin(a+halfAngle) * radius1;
+    vertex(sx, sy);
+  }
+  endShape(CLOSE);
 }
