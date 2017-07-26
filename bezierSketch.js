@@ -3,7 +3,7 @@ var pointX;
 var pointY;
 
 function setup(){
-	createCanvas(window.innerWidth, window.innerHeight);
+	createCanvas(window.innerWidth, window.innerHeight*.75);
 	background(255);
 	stroke(0);
 	noFill();

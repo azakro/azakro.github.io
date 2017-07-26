@@ -1,29 +1,32 @@
-function setup(){
-	createCanvas(window.innerWidth, window.innerHeight);
-}
+function curveSketch(sketch){
 
-function draw(){
-	noFill();
-	//maroon
-	stroke(128, 0, 0);
-	curve(mouseX, 100, mouseX, mouseY, 73, 24, 73, 61);
-	//dark golden rod
-	stroke(184, 134, 11);
-	curve(100, 400, 300, mouseY, 50, 80, 500, 30, mouseY);
-	//saddle brown
-	stroke(139, 69, 19);
-	curve(100, mouseY, 500, mouseY, 100, 450, mouseX, 300, mouseY);
-	//pale green
-	stroke(84, 139, 84);
-	curve(mouseX, 500, mouseX, 500, mouseX, 100, window.innerHeight, 100);
-	//dark olive green
-	stroke(85, 107, 47);
-	curve(window.innerWidth, 400, mouseX, 600, window.innerHeight, mouseX, 500, 30, 100);
-	//melon
-	stroke(227, 168, 105);
-	curve(100, mouseY, mouseX, 60, window.innerHeight, window.innerWidth, 400, mouseY, 30);
-	//dark brown
-	stroke(101, 67, 33);
-	curve(400, window.innerHeight, 100, window.innerHeight, mouseX, mouseY, 600, window.innerHeight, 30);
+	sketch.setup = function(){
+		sketch.createCanvas(window.innerWidth, window.innerHeight);
+		sketch.background(255);
+	}
 
+	sketch.draw = function(){
+		sketch.noFill();
+		//maroon
+		sketch.stroke(128, 0, 0);
+		sketch.curve(sketch.mouseX, 100, sketch.mouseX, sketch.mouseY, 73, 24, 73, 61);
+		//dark golden rod
+		sketch.stroke(184, 134, 11);
+		sketch.curve(100, 400, 300, sketch.mouseY, 50, 80, 500, 30, sketch.mouseY);
+		//saddle brown
+		sketch.stroke(139, 69, 19);
+		sketch.curve(100, sketch.mouseY, 500, sketch.mouseY, 100, 450, sketch.mouseX, 300, sketch.mouseY);
+		//pale green
+		sketch.stroke(84, 139, 84);
+		sketch.curve(sketch.mouseX, 500, sketch.mouseX, 500, sketch.mouseX, 100, window.innerHeight, 100);
+		//dark olive green
+		sketch.stroke(85, 107, 47);
+		sketch.curve(window.innerWidth, 400, sketch.mouseX, 600, window.innerHeight, sketch.mouseX, 500, 30, 100);
+		//melon
+		sketch.stroke(227, 168, 105);
+		sketch.curve(100, sketch.mouseY, sketch.mouseX, 60, window.innerHeight, window.innerWidth, 400, sketch.mouseY, 30);
+		//dark brown
+		sketch.stroke(101, 67, 33);
+		sketch.curve(400, window.innerHeight, 100, window.innerHeight, sketch.mouseX, sketch.mouseY, 600, window.innerHeight, 30);
+	}
 }

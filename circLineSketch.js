@@ -1,38 +1,41 @@
-var theSize = 75;
-var theSizeBoolean = true;
+function circLineSketch(sketch){
 
-function setup(){
-	createCanvas(window.innerWidth, window.innerHeight);
-	
-}
+	var theSize = 75;
+	var theSizeBoolean = true;
 
-function draw(){
-
-	var r = random(255);
-	var g = random(255);
-	var b = random(255);
-
-	var x = random(window.innerWidth);
-	
-	stroke(r, g, b);
-	line(x, 0, x, window.innerHeight);
-
-	stroke(0);
-	noFill();
-	ellipse(mouseX, mouseY, theSize, theSize);
-
-	console.log(theSize);
-	
-	if(theSize >= 75){
-		theSizeBoolean = true
-	}else if(theSize <= 0){
-		theSizeBoolean = false;
+	sketch.setup = function() {
+		sketch.createCanvas(window.innerWidth, window.innerHeight);
+		sketch.background(255);
+		
 	}
 
-	if(theSizeBoolean == true){
-		theSize--;
-	}else if(theSizeBoolean == false){
-		theSize++;
-	}
+	sketch.draw = function() {
 
+		var r = sketch.random(255);
+		var g = sketch.random(255);
+		var b = sketch.random(255);
+
+		var x = sketch.random(window.innerWidth);
+		
+		sketch.stroke(r, g, b);
+		sketch.line(x, 0, x, window.innerHeight);
+
+		sketch.stroke(0);
+		sketch.noFill();
+		sketch.ellipse(sketch.mouseX, sketch.mouseY, theSize, theSize);
+
+		
+		if(theSize >= 75){
+			theSizeBoolean = true
+		}else if(theSize <= 0){
+			theSizeBoolean = false;
+		}
+
+		if(theSizeBoolean == true){
+			theSize--;
+		}else if(theSizeBoolean == false){
+			theSize++;
+		}
+
+	}
 }

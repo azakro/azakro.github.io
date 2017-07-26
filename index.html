@@ -3,22 +3,49 @@
 <head>
 	<title>Home</title>
 	<link rel="stylesheet" href="index.css">
-    <script src="p5.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300" rel="stylesheet">
+	<script src="p5.js"></script>
     <script type="text/javascript" src="rainbowTri.js"></script>
-    <script type="text/javascript" src="website.js"></script>
+    <script type="text/javascript" src="circLineSketch.js"></script>
+    <script type="text/javascript" src="orbitSketch.js"></script>
+    <script type="text/javascript" src="curveSketch.js"></script>
+  
 </head>
 
 <body>
-	<h1><center> Alana Zakroczemski </center></h1>
-	<div class="menuBar">
-		<center>
-		<ul style="list-style-type:none">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="Resume.pdf">Resume</a></li>
-			<li><a href="portfolio.html">Links</a></li>
-		</ul>
-		</center>
+
+	<div class="head">
+		<h1><center> alana </center></h1>
+		<div class="menuBar">
+			<center>
+				<ul>
+					<li><a href="index.html">home</a></li>
+					<li><a href="Resume.pdf">resume</a></li>
+					<li><a href="links.html">links</a></li>
+				</ul>
+			</center>
+		</div>
 	</div>
 
+	<div class="space"></div>
+
+	<div id="sketch1Container"></div>
+
+	<div class="space"></div>
+
+	<div id="sketch2Container"></div>
+
+	<div class="space"></div>
+
+	<div id="sketch3Container"></div>
+
+	<div class="space"></div>
+	
+	<script>
+   		var sketch1 = new p5(rainbowTri, "sketch1Container");
+   		var sketch2 = new p5(circLineSketch, "sketch2Container");
+   		var sketch3 = new p5(curveSketch, "sketch3Container");
+	</script>
 </body>
+
 </html>
