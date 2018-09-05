@@ -29,10 +29,10 @@ function draw(){
 	text("photos", innerWidth-150, 2*(innerHeight/5));
 
 	fill(255);
-	if(mouseX>innerWidth-160 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+	if(mouseX>innerWidth-130 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
 		fill(randomColor1, randomColor2, randomColor3);
 	}
-	text("linkedin", innerWidth-160, 3*(innerHeight/5));
+	text("music", innerWidth-130, 3*(innerHeight/5));
 
 	fill(255);
 	if(mouseX>innerWidth-160 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
@@ -69,8 +69,8 @@ function mouseClicked(){
 		link("https://github.com/azakro");
 	}else if(mouseX>innerWidth-150 && mouseY>2*(innerHeight/5)-30 && mouseY<2*(innerHeight/5)){
 		link("https://vsco.co/azakro");
-	}else if(mouseX>innerWidth-160 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
-		link("https://www.linkedin.com/in/alana-z-a507268a/");
+	}else if(mouseX>innerWidth-130 && mouseY>3*(innerHeight/5)-30 && mouseY<3*(innerHeight/5)){
+		link("https://open.spotify.com/user/azakro");
 	}else if(mouseX>innerWidth-160 && mouseY>4*(innerHeight/5)-30 && mouseY<4*(innerHeight/5)){
 		var randomSketch = random(3);
 		if(randomSketch == 0 || randomSketch > 0 && randomSketch < 1){
